@@ -1,18 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'  // Global styles for your application
+import './styles/style.css'  // Global styles for your application
 import { RouterProvider } from "react-router-dom";  // Import RouterProvider to use the router
-import { router } from "./routes";  // Import the router configuration
-import { StoreProvider } from './hooks/useGlobalReducer';  // Import the StoreProvider for global state management
+import router from "./routes";  // Import the router configuration
+import StoreProvider from './hooks/useGlobalReducer';
+import { Provider } from 'react-redux';
+import store from './store';
+import Home from './pages/Home';
+
 
 const Main = () => {
     return (
-        <React.StrictMode>  
-            {/* Provide global state to all components */}
-            <StoreProvider> 
-                {/* Set up routing for the application */} 
+        <React.StrictMode>
+           
+            <StoreProvider>
+
+                <Provider store={store}>
+                      <Home />
+                </Provider>,
+
+
                 <RouterProvider router={router}>
                 </RouterProvider>
+
             </StoreProvider>
         </React.StrictMode>
     );

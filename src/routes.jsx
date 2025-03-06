@@ -6,11 +6,11 @@ import {
     Route,
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
-import { Home } from "./pages/Home";
+import Home from './pages/Home';  
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
 
-export const router = createBrowserRouter(
+ const router = createBrowserRouter(
     createRoutesFromElements(
     // CreateRoutesFromElements function allows you to build route elements declaratively.
     // Create your routes here, if you want to keep the Navbar and Footer in all views, add your new routes inside the containing Route.
@@ -28,3 +28,5 @@ export const router = createBrowserRouter(
       </Route>
     )
 );
+
+export default router;
