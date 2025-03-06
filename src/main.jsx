@@ -7,18 +7,23 @@ import StoreProvider from './hooks/useGlobalReducer';
 import { Provider } from 'react-redux';
 import store from './store';
 import Home from './pages/Home';
-
+import ImageSlider from './components/ImageSlider';
+import Images from './components/Images';
 
 const Main = () => {
     return (
         <React.StrictMode>
-           
+
             <StoreProvider>
 
                 <Provider store={store}>
-                      <Home />
+                    <Home />
                 </Provider>,
 
+                <div>
+                    <h1>Mi Slider en React</h1>
+                    <ImageSlider images={Images} interval={3000} autoplay={true} showButtons={true} />
+                </div>
 
                 <RouterProvider router={router}>
                 </RouterProvider>
