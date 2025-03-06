@@ -3,3 +3,5 @@ de moento tengo el characterCard cpn el get. recive datos pero hay que arreglarl
 hay que hacer las demas cards.
 
 por ahora hace la llamada y fucniona.
+
+AHORA ESTOY PROBANDO SI SUBE BIEN
